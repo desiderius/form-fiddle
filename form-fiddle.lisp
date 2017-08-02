@@ -77,7 +77,7 @@
      ;; until we reach a list, which must be
      ;; the lambda-list of the form.
      (if lambda-p
-         (list NIL)
+         (list nil)
          (list (pop body)))
      (loop for form = (pop body)
            until (listp form)
@@ -119,7 +119,7 @@
      ;; intended behaviour suggested by 3.4.11 .
      ;;
      ;; We opt to choose the first occurring docstring.
-     (loop with docstring = NIL
+     (loop with docstring = nil
            for forms on body
            for form = (car forms)
            for i from 0 below (1- (length body))
